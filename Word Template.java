@@ -27,7 +27,13 @@ public class Word{
      */
     public static void scrambleOrRemove(List<String> wordList){
         /* part (b) */
-
+        for(int i =0; i< wordList.size(); i++){
+            if(scrambledWord(wordLList.get(i)).equals(wordList.get(i))){
+                wordList.remove(i);}
+            else{
+                wordList.set(i, scrambledWord(wordList.get(i));}
+            }                
+        }
     }
 
     public static void main(String[] args)
