@@ -13,10 +13,14 @@ public class Word{
      */
     public static String scrambleWord(String word)
     {
-        /* part (a) */
-        int index = 0;
-        for(int i = 0; i< word.length(); i++){
+        /* part (a) */       
+        for(int i = 0; i< word.length()-1; i++){
             if(word.substring(i,i+1).equals("A")){
+                word = word.substring(0,i) + word.substring(i+1,i+2)+ word.substring(i,i+1)+ word.substring( i+2);
+                i += 2;
+            }
+        }
+        return word;
                 
     }
     /** Modifies wordList by replacing each word with its scrambled
